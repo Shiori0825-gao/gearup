@@ -12,7 +12,7 @@ export default function Register() {
     terms: false,
   });
 
-  // handle input change for text and checkbox
+  // handle input change for text and checkbox fields
   function onChange(e) {
     const { name, value, type, checked } = e.target;
     setForm((f) => ({ ...f, [name]: type === "checkbox" ? checked : value }));
