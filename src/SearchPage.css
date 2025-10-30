@@ -16,6 +16,7 @@
   padding: 15px 30px;
   position: sticky;
   top: 0;
+   z-index: 1000;
 }
 
 .logo {
@@ -179,9 +180,13 @@
 
 .car-card img {
   width: 300px;
-  height: 180px;
-  object-fit: cover;
+  height: auto;               
+  object-fit: contain;        
+  background-color: #f8f8f8; 
+  border-radius: 8px;
+  margin: 10px;
 }
+
 
 .car-info {
   flex: 1;
@@ -218,4 +223,26 @@
 .price button:hover {
   background-color: #0033cc;
   transform: scale(1.05);
+}
+
+/* HEADER + LOGO */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo-img {
+  width: 130px;          /* adjust size here */
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0));
+}
+
+.logo-img:hover {
+  transform: scale(1.08);
 }
